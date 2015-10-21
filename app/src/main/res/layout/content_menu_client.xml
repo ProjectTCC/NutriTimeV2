@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu Principal"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/bDieta"
+        android:text="Dieta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:onClick="abrirDieta"/>
+    <Button
+        android:id="@+id/bLista"
+        android:text="lista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="abrirLista"/>
+    <Button
+        android:id="@+id/bAjuda"
+        android:text="Ajuda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="abrirAjuda"/>
+    <Button
+        android:id="@+id/bSair"
+        android:text="Sair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+</LinearLayout>
