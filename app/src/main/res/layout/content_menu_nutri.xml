@@ -10,6 +10,14 @@
     tools:context="com.nt.MenuPrincipalNutri"
     tools:showIn="@layout/activity_menu_principal">
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu Principal"
+        android:gravity="center"
+        android:textSize="32dp"
+        />
+
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
