@@ -3,6 +3,7 @@ package com.nutritime2;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -38,6 +39,21 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+
+    ////////////////////////////////////////////////////////////   ////////////////////////////////////////////////////////////   ////////////////////////////////////////////////////////////
+
+    public void starNutri() {
+
+         Intent secondActivity = new Intent(this, MenuNutri.class);
+         startActivity(secondActivity);
+   }
+    public void starCliente() {
+
+         Intent secondActivity = new Intent(this, MenuClient.class);
+         startActivity(secondActivity);
+    }
+
+    ////////////////////////////////////////////////////////////   ////////////////////////////////////////////////////////////   ////////////////////////////////////////////////////////////   ////////////////////////////////////////////////////////////
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -182,17 +198,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // form field with an error.
             focusView.requestFocus();
         } else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-            showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) null);
+            if(email.equalsIgnoreCase("cliente")){
+            starCliente();
+
+            }
+            if(email.equalsIgnoreCase("nutri")){
+            starNutri();
+            }
+
         }
     }
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains("@");
+        return email.contains("@") ||email.equalsIgnoreCase("cliente")|| email.equalsIgnoreCase("nutri");
     }
 
     private boolean isPasswordValid(String password) {
