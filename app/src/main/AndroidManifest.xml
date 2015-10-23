@@ -27,6 +27,7 @@
             android:label="@string/title_activity_menu_nutri"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
         <activity
             android:name=".MenuClient"
             android:label="@string/title_activity_menu_client"
