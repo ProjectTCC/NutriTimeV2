@@ -52,6 +52,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
          Intent secondActivity = new Intent(this, MenuClient.class);
          startActivity(secondActivity);
     }
+   // public void starRegister() {
+        //
+      //  Intent secondActivity = new Intent(this, register.class);
+    //    startActivity(secondActivity);
+    //   }
 
     ////////////////////////////////////////////////////////////   ////////////////////////////////////////////////////////////   ////////////////////////////////////////////////////////////   ////////////////////////////////////////////////////////////
 
